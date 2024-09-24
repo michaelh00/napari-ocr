@@ -30,7 +30,7 @@ def napari_get_reader(path):
         path = path[0]
 
     # if we know we cannot read the file, we immediately return None.
-    if not path.endswith(".npy"):
+    if not path.endswith(".png"):
         return None
 
     # otherwise we return the *function* that can read ``path``.
@@ -63,6 +63,7 @@ def reader_function(path):
     paths = [path] if isinstance(path, str) else path
     # load all files into array
     arrays = [np.load(_path) for _path in paths]
+    # arrays = cv2.imread(path)
     # stack arrays into single array
     data = np.squeeze(np.stack(arrays))
 

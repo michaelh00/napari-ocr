@@ -29,6 +29,9 @@ dependencies = [
     "magicgui",
     "qtpy",
     "scikit-image",
+    "opencv-python",
+    "pytesseract",
+    "napari"
 ]
 
 [project.optional-dependencies]

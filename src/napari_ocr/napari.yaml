@@ -1,5 +1,5 @@
 name: napari-ocr
-display_name: Napari OCR
+display_name: QWidget
 # use 'hidden' to remove plugin from napari hub search results
 visibility: public
 # see https://napari.org/stable/plugins/manifest.html for valid categories
@@ -15,22 +15,22 @@ contributions:
     - id: napari-ocr.write_single_image
       python_name: napari_ocr._writer:write_single_image
       title: Save image data with Napari OCR
-    - id: napari-ocr.make_container_widget
-      python_name: napari_ocr:ImageThreshold
-      title: Make threshold Container widget
-    - id: napari-ocr.make_magic_widget
-      python_name: napari_ocr:threshold_magic_widget
-      title: Make threshold magic widget
-    - id: napari-ocr.make_function_widget
-      python_name: napari_ocr:threshold_autogenerate_widget
-      title: Make threshold function widget
+    # - id: napari-ocr.make_container_widget
+    #   python_name: napari_ocr:ImageThreshold
+    #   title: Make threshold Container widget
+    # - id: napari-ocr.make_magic_widget
+    #   python_name: napari_ocr:threshold_magic_widget
+    #   title: Make threshold magic widget
+    # - id: napari-ocr.make_function_widget
+    #   python_name: napari_ocr:threshold_autogenerate_widget
+    #   title: Make threshold function widget
     - id: napari-ocr.make_qwidget
-      python_name: napari_ocr:ExampleQWidget
-      title: Make example QWidget
+      python_name: napari_ocr:NapariOCRWidget
+      title: Make Napari OCR QWidget
   readers:
     - command: napari-ocr.get_reader
-      accepts_directories: false
-      filename_patterns: ['*.npy']
+      accepts_directories: true
+      filename_patterns: []
   writers:
     - command: napari-ocr.write_multiple
       layer_types: ['image*','labels*']
@@ -39,12 +39,12 @@ contributions:
       layer_types: ['image']
       filename_extensions: ['.npy']
   widgets:
-    - command: napari-ocr.make_container_widget
-      display_name: Container Threshold
-    - command: napari-ocr.make_magic_widget
-      display_name: Magic Threshold
-    - command: napari-ocr.make_function_widget
-      autogenerate: true
-      display_name: Autogenerate Threshold
+    # - command: napari-ocr.make_container_widget
+    #   display_name: Container Threshold
+    # - command: napari-ocr.make_magic_widget
+    #   display_name: Magic Threshold
+    # - command: napari-ocr.make_function_widget
+    #   autogenerate: true
+    #   display_name: Autogenerate Threshold
     - command: napari-ocr.make_qwidget
-      display_name: Example QWidget
+      display_name: Napari OCR
