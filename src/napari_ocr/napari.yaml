@@ -6,29 +6,29 @@ visibility: public
 categories: ["Annotation", "Segmentation", "Acquisition"]
 contributions:
   commands:
-    - id: napari-ocr.get_reader
-      python_name: napari_ocr._reader:napari_get_reader
-      title: Open data with Napari OCR
-    - id: napari-ocr.write_multiple
-      python_name: napari_ocr._writer:write_multiple
-      title: Save multi-layer data with Napari OCR
-    - id: napari-ocr.write_single_image
-      python_name: napari_ocr._writer:write_single_image
-      title: Save image data with Napari OCR
+    # - id: napari-ocr.get_reader
+    #   python_name: napari_ocr._reader:napari_get_reader
+    #   title: Open data with Napari OCR
+    # - id: napari-ocr.write_multiple
+    #   python_name: napari_ocr._writer:write_multiple
+    #   title: Save multi-layer data with Napari OCR
+    # - id: napari-ocr.write_single_image
+    #   python_name: napari_ocr._writer:write_single_image
+    #   title: Save image data with Napari OCR
     - id: napari-ocr.make_qwidget
       python_name: napari_ocr:NapariOCRWidget
       title: Make Napari OCR QWidget
   readers:
-    - command: napari-ocr.get_reader
-      accepts_directories: true
-      filename_patterns: []
+    # - command: napari-ocr.get_reader
+    #   accepts_directories: true
+    #   filename_patterns: []
   writers:
-    - command: napari-ocr.write_multiple
-      layer_types: ['image*','labels*']
-      filename_extensions: []
-    - command: napari-ocr.write_single_image
-      layer_types: ['image']
-      filename_extensions: ['.npy']
+    # - command: napari-ocr.write_multiple
+    #   layer_types: ['image*','labels*']
+    #   filename_extensions: []
+    # - command: napari-ocr.write_single_image
+    #   layer_types: ['image']
+    #   filename_extensions: ['.npy']
   widgets:
     - command: napari-ocr.make_qwidget
       display_name: Napari OCR
