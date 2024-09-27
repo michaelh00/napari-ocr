@@ -31,7 +31,8 @@ dependencies = [
     "scikit-image",
     "opencv-python",
     "pytesseract",
-    "napari"
+    "napari",
+    "napari-guitils"
 ]
 
 [project.optional-dependencies]
